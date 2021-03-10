@@ -1,0 +1,54 @@
+=======>squashing your commits
+
+git rebase -i HEAD~9
+here 9 denote the n where n=number of commits-this will open n commits in default editer for you to edit depending upon requirement
+
+2.in editer --
+change n-1 pick with s
+and save the file
+after you will close this file it will open commit msg ti edit automatically
+
+3. edit commit msges
+
+remove all commits except one you want to keep
+and save file
+
+4.git push -f origin your_branch_name
+
+================>Resolving conflicts===============
+		1.git fetch
+		2.git rebase origin/master
+		3.resolve conflicts manually
+		4.add resolved files (git add)
+		5.git rebase --continue
+		6.verify everything has been rebased
+		7.git push -f origin branch
+
+===========================cherry Pick to minor branch========
+
+		1.checkout to minor branch     git checkout minor/trd/20200912/20200926
+		2.git pulling
+		3.git cherry-pick -m1 merge_id
+		4.git push
+
+===========================creating tags===========
+
+		1.git checkout major/trd/20201010
+		2.git pull
+		3.git tag 20201010-build-0771
+		4.git push origin 20201010-build-07
+
+=======================pulling remote branch to your branch=================
+		1.git pull origin feature/TRD-32280
+
+================================useful git command===============
+       1.git branch -a (shows all known branches)
+	   2.git log --oneline(list all logs history)
+
+=======================pulling master to your branch
+
+git rebase origin/master
+
+git rebase --continue
+
+git push -f origin TRD-31867
