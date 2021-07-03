@@ -1,1 +1,1 @@
-this is content before first stash
+this is content before first stash checkpoint1
