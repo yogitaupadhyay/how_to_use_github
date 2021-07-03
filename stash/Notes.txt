@@ -1,0 +1,160 @@
+command Line agrument
+
+
+___________________________________________________
+there are 33 keywords in python
+
+Function in python
+1.def funcDemo():
+ print("hello")
+
+ 2.can return multiple value,can return function as well
+ 3.if there is no return value ,none is returned and no error is thrown
+ 4.five type of parameters in function
+	 1.positional arguments
+	 2.keyword arment 
+	 3.default argument -default arguments should be the last one
+	 4.variable length arguments-if you are using both positional and var argument them either keep positional first or call them as keyword arguments
+	 5.keyword varibale length arguments
+5.anonymous function
+	lambda input:expression
+6. function as arguments
+filter()
+map()
+reduce()
+
+1.filter():build in function
+-----------------------------------
+filter(function,sequence)
+2.map()
+__________________________________
+
+7.function alising
+______________________________________________
+8.nested function
+	def function1():
+		def inner(a,b):
+			res=a+b
+			print(res)
+
+		inner(10,20)
+		inner(20,30)
+		inner(56,78)
+9.Decorator function
+decorator function is used to extend functionality of existing function
+its takes one function as argument and return another as return value
+
+10.modules 
+groups of functions and variables 
+	reusebality
+	lenght of the code reduced and readability will improve
+	maitainability of app is improve
+for very module pyc file is generated as compilation res and is stored at __pycache__
+_________________________
+import module
+import module1 ,module2 ,module3
+import module as m1
+from module1 import add,x
+from module1 import *
+__________________________
+when we import module in out program we have to access module variable or function by using module name or alias 
+e.g 
+module1.add(10,30)
+module1.x
+m1.u1
+to avaoid that we can use 
+
+from module1 import add,x
+from module1 import *
+from module1 import add as a1
+a1(10,20)
+
+11.Loading Module
+	from imp import reload
+	reload(module1)
+
+12. dir()
+
+13.help(math)-decsription of module
+	import math
+	help(math)
+	
+14.Random module 
+ to geenrate random numbers
+	1.random()- between 0 and 1 non inclusive
+	2.randint(start,end),start<=x<=end
+	3.uniform(start,end),start<x<end,return float
+	4.randrange(start,end,step) ,start<=x<end
+	5.choice(),return random object from indexable collection or indexable sequence,e.g. set is not allowed
+15.Exception Handling
+baseException 
+	Exception
+		Airthmaticerror
+			zeroDivisonError
+			overflowerror
+			floatingPointError
+		Lookuperror
+			indexError
+			keyerror
+		oserror
+			fileNotfounderror
+			interruptederror
+			timeouterror
+			permissionerror
+		AttributeError
+		EOF error
+		Nameerror
+		typeerror
+		valueerror
+	System Exit
+	GeneratorExit
+	Keyboardinterrupt
+
+16.Logging
+CRITICAL 50
+ERROR 40
+WARNING 30
+INFO 20
+DEBUG 10
+NOTSET
+
+logging.basicConfig(filename='log.txt' ,level=logging.DEBUG)
+logging.critical("this is crical msg")
+logging.error("this is error msg")
+logging.warning("this is warning msg")
+logging.info("this is info msg")
+logging.debug("this is debugs msg")
+logging.exception("this is exception______")
+
+no matter what logging level is it always log exception
+
+17.Debugging
+18.Oops
+class classname:
+	'''doc string'''
+	attributes
+	actions
+
+	attributes
+		instance 
+		static
+		local
+	actions
+		instance
+		class
+		static
+	
+
+
+
+ 
+
+ 
+ 
+
+
+
+
+
+
+
