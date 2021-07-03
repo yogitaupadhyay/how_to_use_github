@@ -1,9 +1,0 @@
-
-this is content before first stash checkpoint1
-
-
-
-this is content before first stash
-
-this is content befire second stash
-custom stash
