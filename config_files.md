@@ -2,7 +2,7 @@
 `[path]/etc/gitconfig`
 
 ## 2. User level config file
-`~/.gitconfig or ~/.config/git/config`
+`~/.gitconfig or ~/.config/git/config` or `C:\Users\$USER\gitconfig`
 
 Exmaple of user level git config file-
 
