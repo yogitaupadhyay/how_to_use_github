@@ -13,11 +13,28 @@
                 full, fuller, and format (where you specify your own format).
 --oneline       Shorthand for --pretty=oneline --abbrev-commit used together.
                 Limiting
---since
---until
+
+-S              It will take a string and show all commit that include some change in that strin e.g. `git log -S func`
+                it will show all changes to func string
+-<n>            Show only the last n commits
+--since,        Limit the commits to those made after the specified date.
+--after
+--until,        Limit the commits to those made before the specified date.
+--before
+--author        Only show commits in which the author entry matches the
+                specified string.
+--committer     Only show commits in which the committer entry matches the
+                specified string.
+--grep          Only show commits with a commit message containing the string
+                Option Description
+--no-merges     Not merge commits
+                 
+                 
 ```
 
 
+## Git log of a file
+`git log -- path/to/file`
 
 ## Git log with patch
 `git log -p`
@@ -139,4 +156,26 @@ Author: yogitaupadhyay <yogitau2008@gmail.com>
 Date:   Sat Jan 22 12:40:52 2022 +0530
 
     just adding commit
-    ```
+  ```
+    
+  ```
+D:\MyWorkingDir\LowLevelDesign>git log -S func
+commit 2fa2af7b821a147405f930b1ca0ffb6e94666b6a (origin/master)
+Author: yogitaupadhyay <yogitau2008@gmail.com>
+Date:   Sun Jan 16 14:01:14 2022 +0530
+
+    bridge
+
+commit bd9318e2fd88561daa77c32badd0b18a8c3ec033
+Author: yogitaupadhyay <yogitau2008@gmail.com>
+Date:   Thu Jan 13 17:57:21 2022 +0530
+
+    adding readme
+  ```
+    
+    
+ ## Custom search 
+ ```
+ git log --pretty="%h - %s" --author='Junio C Hamano' --since="2008-10-01" \
+--before="2008-11-01" --no-merges -- t/
+```
