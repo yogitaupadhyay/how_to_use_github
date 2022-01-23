@@ -55,3 +55,39 @@ From https://github.com/yogitaupadhyay/LowLevelDesign
 
 * If you want the default behavior of git (fast-forward if possible, else create a merge commit): git config --global pull.rebase "false"
 * If you want to rebase when pulling: git config --global pull.rebase "true"
+
+
+## Rename Git remote 
+
+```
+
+D:\MyWorkingDir\LowLevelDesign>git remote rename newOrigin yogi
+
+D:\MyWorkingDir\LowLevelDesign>git remote -v
+origin  https://github.com/yogitaupadhyay/LowLevelDesign (fetch)
+origin  https://github.com/yogitaupadhyay/LowLevelDesign (push)
+yogi    https://github.com/yogitaupadhyay/LowLevelDesign (fetch)
+yogi    https://github.com/yogitaupadhyay/LowLevelDesign (push)
+
+```
+
+## Remove git remote 
+
+```
+
+D:\MyWorkingDir\LowLevelDesign>git remote remove yogi
+
+D:\MyWorkingDir\LowLevelDesign>git remote -v
+origin  https://github.com/yogitaupadhyay/LowLevelDesign (fetch)
+origin  https://github.com/yogitaupadhyay/LowLevelDesign (push)
+
+```
+
+```
+D:\MyWorkingDir\LowLevelDesign>git remote rm yogi
+
+D:\MyWorkingDir\LowLevelDesign>git remote
+origin
+```
+
+
