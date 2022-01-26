@@ -34,3 +34,40 @@ D:\MyWorkingDir\LowLevelDesign>git log --graph --oneline --decorate --all
 * 30e91f3 First commit
 * f76c324 (origin/main) Initial commit
  ```
+## Find out all merged branchw w.r.t current branch
+` git branch --merge`
+## Find out all unmerged branches w.r.t current branch
+`git branch --no-merge`
+
+## Find out all merged branchw w.r.t specified branch
+` git branch --merge <SpecificbranchName>`
+## Find out all unmerged branches w.r.t specified branch
+`git branch --no-merge <SpecificbranchName>`
+
+## Change branch name
+`$ git branch --move bad-branch-name corrected-branch-name`
+This replaces your bad-branch-name with corrected-branch-name, but this change is only local for
+now. To let others see the corrected branch on the remote, push it:
+`$ git push --set-upstream origin corrected-branch-name`
+```
+$ git branch --all
+* corrected-branch-name
+main
+remotes/origin/bad-branch-name
+remotes/origin/corrected-branch-name
+remotes/origin/main
+```
+Notice that you’re on the branch corrected-branch-name and it’s available on the remote. However,
+the branch with the bad name is also still present there but you can delete it by executing the
+following command:
+`$ git push origin --delete bad-branch-name`
+
+```
+“origin” is not special
+Just like the branch name “master” does not have any special meaning in Git,
+neither does “origin”. While “master” is the default name for a starting branch
+when you run git init which is the only reason it’s widely used, “origin” is the
+default name for a remote when you run git clone. If you run git clone -o booyah
+instead, then you will have booyah/master as your default remote branch.
+86
+```
